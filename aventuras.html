@@ -1,56 +1,37 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aventurer 1 - Les Aventures</title>
+    <title>Aventures d'Aprenentatge</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Les Aventures d'Alumne 1</h1>
-    <div id="aventures-container">
-        <!-- Les aventures seran carregades aquí -->
+    <div class="aventures-container">
+        <h1>Aventures d'Aprenentatge</h1>
+        <p>Tria una aventura per al dia d'avui:</p>
+
+        <div class="aventura">
+            <h2>Aventura de Sumes</h2>
+            <p>Completa les sumes per superar aquesta aventura!</p>
+            <a href="aventura-sumes.html">
+                <button class="aventura-btn">Comença Aventura</button>
+            </a>
+        </div>
+
+        <div class="aventura">
+            <h2>El Laverint Sumat</h2>
+            <p>Resolve els enigmes del laverint i supera les sumes!</p>
+            <a href="El-Laverint-Sumat.html">
+                <button class="aventura-btn">Comença Aventura</button>
+            </a>
+        </div>
+
+        <!-- Pots afegir més aventures aquí -->
+
     </div>
-    <button onclick="logout()">Tanca sessió</button>
-
-    <script>
-        // Carregar l'usuari actual des del localStorage
-        const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-        
-        // Mostrar les aventures de l'usuari
-        const aventuresContainer = document.getElementById("aventures-container");
-        
-        if (currentUser) {
-            // Mostrar les aventures de l'usuari
-            currentUser.adventures.forEach((aventura, index) => {
-                const divAventura = document.createElement("div");
-                divAventura.className = "aventura";
-                divAventura.innerHTML = `
-                    <h2>${aventura.name}</h2>
-                    <p>Status: ${aventura.completed ? "Completada" : "Pendiente"}</p>
-                    ${!aventura.completed ? `<button onclick="completeAdventure(${index})">Supera Aventura</button>` : ""}
-                `;
-                aventuresContainer.appendChild(divAventura);
-            });
-        }
-
-        // Marcar una aventura com a completada i passar a la següent
-        function completeAdventure(index) {
-            // Marca l'aventura com a completada
-            currentUser.adventures[index].completed = true;
-
-            // Desa l'usuari actualitzat al localStorage
-            localStorage.setItem("currentUser", JSON.stringify(currentUser));
-
-            // Actualitza la vista de les aventures
-            window.location.reload();
-        }
-
-        // Tanca sessió
-        function logout() {
-            localStorage.removeItem("currentUser");
-            window.location.href = "index.html"; // Torna a la pàgina d'inici
-        }
-    </script>
 </body>
+
 </html>
