@@ -15,4 +15,10 @@ function Sesio_1_Prova() {
         alert("As Fallat")
         window.location.href = "https://aleixsapa.github.io/Escola-Fem-Creixe/Ensenyar%20a%20programar/Sesion%201.html"
     }
+    var prompt01 = prompt("Es Mirat els eggemples o google o intel·ligències artificials")
+    if (prompt01 == "No") {
+        alert("Molt ve o as completat")
+    } else {
+        alert("As Fallat")
+    }
 }
