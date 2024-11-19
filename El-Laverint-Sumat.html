@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Laverint Sumat</title>
+    <link rel="stylesheet" href="El-Laverint-Sumant.css">
+</head>
+
+<body>
+    <div class="aventura-container">
+        <h1>Aventura: El Laverint Sumat!</h1>
+        <p>Troba el camí correcte responent a aquestes sumes:</p>
+
+        <!-- Exercicis de sumes -->
+        <div id="sumes-container">
+            <div class="exercici">
+                <label for="sum4">9 + 6 = </label>
+                <input type="number" id="sum4" placeholder="Resposta">
+            </div>
+            <div class="exercici">
+                <label for="sum5">15 + 8 = </label>
+                <input type="number" id="sum5" placeholder="Resposta">
+            </div>
+            <div class="exercici">
+                <label for="sum6">7 + 12 = </label>
+                <input type="number" id="sum6" placeholder="Resposta">
+            </div>
+        </div>
+
+        <button id="submitLaverintBtn">Comprovar Respostes</button>
+        <p id="resultLaverint"></p>
+        <button id="nextLaverintBtn" style="display:none;" onclick="completeLaverintAdventure()">Completat!</button>
+    </div>
+
+    <script src="El-Laverint-Sumant.js"></script>
+</body>
+
+</html>
