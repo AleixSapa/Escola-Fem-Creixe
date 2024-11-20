@@ -7,7 +7,7 @@ function Sesio_1_Prova() {
         alert("Molt bé, ho has completat!");
     } else {
         alert("Has fallat.");
-        location.reload()
+        window.location.href = "https://aleixsapa.github.io/Escola-Fem-Creixe/Ensenyar%20a%20programar/Sesion%201.html";
     }
     var prompt02 = prompt("Hi Que tenen de diferencia");
     if (prompt02 == "") {
@@ -21,7 +21,7 @@ function Sesio_1_Prova() {
         alert("Molt bé, ho has completat!");
     } else {
         alert("Has fallat.");
-        location.reload()
+        window.location.href = "https://aleixsapa.github.io/Escola-Fem-Creixe/Ensenyar%20a%20programar/Sesion%201.html";
     }
 
     var prompt01 = prompt("Has mirat els exemples, Google o intel·ligències artificials?");
