@@ -2,51 +2,66 @@ var Vanessa = 2025;
 var Aleix = 2025;
 var Pilar = 2025;
 var Mat = 2024;
-var Esteve = 2025;
+var Sara = 2025
+var Sofia =2025
+var Luke =2025
+var Leo =2025
+var Emma =2025
 var Eventos =
     [
-
-        {
-            title: 'Aniversari Esteve',
-            start: Esteve+"01-08",
-            mes: 'Setembre',
-            year: '2024'
-        },
         {
             title: 'Aniversari Vanessa',
             start: Vanessa+"01-23",
             mes: 'Setembre',
-            year: '2024'
-        },
-        {
-            title: 'Aniversari Noemi',
-            start: '2025-01-26',
-            mes: 'Setembre',
-            year: '2024'
-        },
-        {
-            title: 'Aniversari Noam',
-            start: '2025-06-22',
-            mes: 'Setembre',
-            year: '2024'
+            year: Vanessa
         },
         {
             title: 'Aniversari Aleix',
-            start: '2024-09-01',
+            start: Aleix+'09-01',
             mes: 'Setembre',
-            year: '2024'
+            year: Aleix
         },
         {
-            title: 'Cumple Pilar',
-            start: +"-",
-            mes: 'octubre',
-            year: '2024'
+            title: 'Aniversari Pilar',
+            start: Pilar+"-",
+            mes: 'Octubre',
+            year: Pilar
         },
         {
             title: 'Aniversari Mat',
-            start: '2024-12-30',
+            start: Mat+'-12-30',
             mes: 'Desembre',
-            year: '2024'
+            year: Mat
+        },
+        {
+            title: 'Aniversari'+'',
+            start: Sara+'3/17',
+            mes: '',
+            year: Sara
+        },
+        {
+            title: 'Aniversari'+'',
+            start: Sofia+'',
+            mes: '',
+            year: Sofia
+        },
+        {
+            title: 'Aniversari'+'',
+            start: Luke+'',
+            mes: '',
+            year: Luke
+        },
+        {
+            title: 'Aniversari'+'',
+            start: Leo+'',
+            mes: 'Novembre',
+            year: Leo
+        },
+        {
+            title: 'Aniversari'+'',
+            start: Emma+'',
+            mes: '',
+            year: Emma
         },
     ];
 //2025-06-17
