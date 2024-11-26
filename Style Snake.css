@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#gameCanvas {
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}

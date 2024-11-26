@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Paper o Tisores</title>
+    <link rel="stylesheet" href="Style Pedra.css">
+</head>
+<body>
+    <h1>Pedra, Paper o Tisores</h1>
+
+    <div class="resultats">
+        <p id="resultat">Tria una opció per començar a jugar!</p>
+        <p>Punts de l'usuari: <span id="puntsUsuari">0</span></p>
+        <p>Punts de l'ordinador: <span id="puntsOrdinador">0</span></p>
+    </div>
+    
+    <div class="opcions">
+        <button class="opcio" onclick="jugar('pedra')">Pedra</button>
+        <button class="opcio" onclick="jugar('paper')">Paper</button>
+        <button class="opcio" onclick="jugar('tisores')">Tisores</button>
+    </div>
+
+    <script src="Script Pedra.js"></script>
+</body>
+</html>
+
