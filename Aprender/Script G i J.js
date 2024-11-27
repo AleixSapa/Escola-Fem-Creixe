@@ -1,15 +1,21 @@
 var preguntes = [
-    pregunta(Jutge,Gutje,0  )
-];
-function pregunta(R01,R02,C) {
     {
-       var pregunta= Promt
-       var opcions= [R01, R02]
-       var respostaCorrecta= C
-       alert("Funciona")
+        pregunta: "Quina és la capital de França?",
+        opcions: ["Madrid", "París"],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quin és el planeta més proper al Sol?",
+        opcions: ["Venus", "Mercuri"],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quin any va acabar la Segona Guerra Mundial?",
+        opcions: ["1945", "1950"],
+        respostaCorrecta: 0
     }
-}
-var Promt ="Quina és la correcta?"
+];
+
 var preguntaActual = 0;
 var puntuacio = 0;
 
