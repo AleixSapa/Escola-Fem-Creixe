@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Preguntes</title>
+    <link rel="stylesheet" href="Style G i J.css">
+</head>
+<body>
+    <div id="inici">
+        <h1>Benvinguts al simulador de preguntes!</h1>
+        <p>Comença el joc i posa a prova els teus coneixements.</p>
+        <button onclick="començarJoc()">Començar</button>
+    </div>
+
+    <div id="joc" style="display: none;">
+        <p id="pregunta"></p>
+        <button onclick="comprovarResposta(0)" id="opcio1"></button>
+        <button onclick="comprovarResposta(1)" id="opcio2"></button>
+    </div>
+
+    <div id="resultats" style="display: none;">
+        <h2>Resultats</h2>
+        <p id="resultatsText"></p>
+        <button onclick="reiniciar()">Tornar a jugar</button>
+    </div>
+
+    <script src="Script G i J.js"></script>
+</body>
+</html>
