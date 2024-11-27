@@ -1,19 +1,305 @@
 var preguntes = [
     {
-        pregunta: "Quina és la capital de França?",
-        opcions: ["Madrid", "París"],
-        respostaCorrecta: 1
-    },
-    {
-        pregunta: "Quin és el planeta més proper al Sol?",
-        opcions: ["Venus", "Mercuri"],
-        respostaCorrecta: 1
-    },
-    {
-        pregunta: "Quin any va acabar la Segona Guerra Mundial?",
-        opcions: ["1945", "1950"],
+        pregunta: "Quina és la correcta?",
+        opcions: ["Jutge","Gutge"],
         respostaCorrecta: 0
-    }
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["Jirafa","Girafa"],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["Geus","Jeus"],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["Girona","Jirona"],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["Fugi","Fuji"],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["Mengar","Menjar"],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["Jordi","Gordi"],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["Jogina","Joguina"],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["Magestad","MajestAt"],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 0
+    },
+    {
+        pregunta: "Quina és la correcta?",
+        opcions: ["",""],
+        respostaCorrecta: 1
+    },
+    
 ];
 
 var preguntaActual = 0;
@@ -40,9 +326,10 @@ function mostrarPregunta() {
     if (preguntaActual < preguntes.length) {
         var pregunta = preguntes[preguntaActual];
         document.getElementById('pregunta').innerText = pregunta.pregunta;
-        for (var i = 0; i < 2; i++) {
-            document.getElementById('opcio' + i).innerText = pregunta.opcions[i];
-        }
+
+        // Assignar el text de les opcions als botons
+        document.getElementById('opcio1').innerText = pregunta.opcions[0];
+        document.getElementById('opcio2').innerText = pregunta.opcions[1];
     } else {
         mostrarResultats();
     }
@@ -52,7 +339,9 @@ function comprovarResposta(opcio) {
     var pregunta = preguntes[preguntaActual];
     if (opcio === pregunta.respostaCorrecta) {
         puntuacio++;
+     //   alert("Ho has encertat! Molt bé!");
     }
+   // else{ alert("Has fallat"); }
     preguntaActual++;
     mostrarPregunta();
 }
@@ -69,3 +358,5 @@ function reiniciar() {
     document.getElementById('resultats').style.display = 'none';
     document.getElementById('inici').style.display = 'block';
 }
+document.getElementById('opcio1').innerText = pregunta.opcions[0];
+document.getElementById('opcio2').innerText = pregunta.opcions[1];
