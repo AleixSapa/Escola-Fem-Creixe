@@ -245,6 +245,7 @@ var preguntes = [
     respostaCorrecta: 1
   },
 ]
+
 var preguntaActual = 0;
 var puntuacio = 0;
 
@@ -303,3 +304,4 @@ function reiniciar() {
 }
 document.getElementById('opcio1').innerText = pregunta.opcions[0];
 document.getElementById('opcio2').innerText = pregunta.opcions[1];
+
