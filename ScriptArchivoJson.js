@@ -58,10 +58,10 @@ var Eventos =
             year: Leo
         },
         {
-            title: 'Aniversari',
-            start: Emma+'',
+            title: '',
+            start: '',
             mes: '',
-            year: Emma
+            year: ''
         },
     ];
 //2025-06-17
