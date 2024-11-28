@@ -68,9 +68,7 @@ var preguntes = [
 ];
 
 var preguntaActual = 0;
-var puntuacioJugador1 = 0;
-var puntuacioJugador2 = 0;
-var tornJugador1 = true; // Comença el jugador 1
+var puntuacio = 0;
 
 function començarJoc() {
     // Barrejar les preguntes abans de començar
@@ -97,14 +95,6 @@ function mostrarPregunta() {
         // Assignar el text de les opcions als botons
         document.getElementById('opcio1').innerText = pregunta.opcions[0];
         document.getElementById('opcio2').innerText = pregunta.opcions[1];
-
-        // Mostrar quin jugador li toca
-        if (tornJugador1) {
-            document.getElementById('torn').innerText = "Li toca al Jugador 1";
-        } else {
-            document.getElementById('torn').innerText = "Li toca al Jugador 2";
-        }
-
     } else {
         mostrarResultats();
     }
@@ -112,21 +102,11 @@ function mostrarPregunta() {
 
 function comprovarResposta(opcio) {
     var pregunta = preguntes[preguntaActual];
-    
     if (opcio === pregunta.respostaCorrecta) {
-        // El jugador encertó la pregunta
-        if (tornJugador1) {
-            puntuacioJugador1++;
-        } else {
-            puntuacioJugador2++;
-        }
-    } else {
-        // Si el jugador falla, mostrem un alert i canvia el torn
-        alert("Has fallat! Ara li toca a l'altre jugador.");
+        puntuacio++;
+     //   alert("Ho has encertat! Molt bé!");
     }
-
-    // Canviem el torn
-    tornJugador1 = !tornJugador1;
+   // else{ alert("Has fallat"); }
     preguntaActual++;
     mostrarPregunta();
 }
@@ -134,16 +114,14 @@ function comprovarResposta(opcio) {
 function mostrarResultats() {
     document.getElementById('joc').style.display = 'none';
     document.getElementById('resultats').style.display = 'block';
-    document.getElementById('resultatsText').innerText = 
-        "Puntuació Jugador 1: " + puntuacioJugador1 + "\n" +
-        "Puntuació Jugador 2: " + puntuacioJugador2;
+    document.getElementById('resultatsText').innerText = "Has obtingut " + puntuacio + " de " + preguntes.length + " respostes correctes!";
 }
 
 function reiniciar() {
     preguntaActual = 0;
-    puntuacioJugador1 = 0;
-    puntuacioJugador2 = 0;
-    tornJugador1 = true; // Tornem a començar amb el jugador 1
+    puntuacio = 0;
     document.getElementById('resultats').style.display = 'none';
     document.getElementById('inici').style.display = 'block';
 }
+document.getElementById('opcio1').innerText = pregunta.opcions[0];
+document.getElementById('opcio2').innerText = pregunta.opcions[1];

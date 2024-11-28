@@ -17,7 +17,7 @@ var preguntes = [
       {
         pregunta: "Quina és la correcta?",
         opcions: ["Vamable", "Amable"],
-        respostaCorrecta: 1
+        respostaCorrecta: 1 
       },
       {
         pregunta: "Quina és la correcta?",
