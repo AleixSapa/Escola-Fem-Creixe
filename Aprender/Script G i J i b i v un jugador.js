@@ -216,8 +216,8 @@ var preguntes = [
   },
   {
     pregunta: "Quina és la correcta?",
-    opcions: ["Joe", "Goe"],
-    respostaCorrecta: 1
+    opcions: ["Joc", "Goe"],
+    respostaCorrecta: 0
   },
   {
     pregunta: "Quina és la correcta?",
@@ -241,7 +241,7 @@ var preguntes = [
   },
   {
     pregunta: "Quina és la correcta?",
-    opcions: ["Rajola", "Rojola"],
+    opcions: ["Ragola", "Rojola"],
     respostaCorrecta: 1
   },
 ]
@@ -283,9 +283,9 @@ function comprovarResposta(opcio) {
     var pregunta = preguntes[preguntaActual];
     if (opcio === pregunta.respostaCorrecta) {
         puntuacio++;
-     //   alert("Ho has encertat! Molt bé!");
+        alert("Ho has encertat! Molt bé!");
     }
-   // else{ alert("Has fallat"); }
+   else{ alert("Has fallat"); }
     preguntaActual++;
     mostrarPregunta();
 }

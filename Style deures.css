@@ -1,0 +1,84 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    background-color: #0078d7;
+    color: white;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+main {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.complete {
+    text-decoration: line-through;
+    color: #999;
+}
+/* Afegir aquesta part a styles.css */
+.hidden {
+    display: none;
+}
+
+.login-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#content {
+    text-align: center;
+}

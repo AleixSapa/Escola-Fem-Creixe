@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llista de Tasques</title>
+    <link rel="stylesheet" href="Style deures.css">
+</head>
+<body>
+    <header>
+        <h1>Llista de Tasques</h1>
+    </header>
+    <main>
+        <!-- Formulari d'inici de sessió -->
+        <div id="login" class="login-container">
+            <h2>Inicia Sessió</h2>
+            <input type="text" id="username" placeholder="Escriu el teu nom...">
+            <button id="loginButton">Inicia Sessió</button>
+        </div>
+
+        <!-- Contingut principal (amagat inicialment) -->
+        <div id="content" class="hidden">
+            <h2>Hola, <span id="userGreeting"></span>!</h2>
+            <div class="task-input">
+                <input type="text" id="task" placeholder="Escriu la teva tasca aquí...">
+                <button id="addTask">Afegeix Tasca</button>
+            </div>
+            <ul id="taskList"></ul>
+            <button id="logout">Tanca Sessió</button>
+        </div>
+    </main>
+    <script src="Script deures.js"></script>
+</body>
+</html>
