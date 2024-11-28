@@ -1,84 +1,148 @@
-/* styles.css */
+/* Estils generals */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    text-align: center;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-header {
-    text-align: center;
-    background-color: #0078d7;
+h1 {
+    background-color: #4CAF50;
     color: white;
-    padding: 1.5rem;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Contenidor per al formulari de registre i login */
+.login-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
     width: 100%;
+    max-width: 400px;
 }
 
-main {
-    margin-top: 20px;
-    width: 90%;
-    max-width: 600px;
-}
-
-.task-input {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-#task {
-    flex-grow: 1;
+/* Estils per als inputs i botons */
+input[type="text"] {
     padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+    margin: 10px 0;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 button {
-    padding: 10px 15px;
-    background-color: #0078d7;
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: 85%;
+    font-size: 16px;
+    background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 button:hover {
-    background-color: #005bb5;
+    background-color: #45a049;
+}
+
+/* Estils per a l'usuari logat i la llista de tasques */
+#content {
+    margin-top: 40px;
+}
+
+h2 {
+    color: #333;
+}
+
+.task-input {
+    margin-top: 20px;
+}
+
+input#task {
+    width: 70%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button#addTask {
+    width: 20%;
 }
 
 #taskList {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    margin: 20px 0;
+    font-size: 18px;
 }
 
 #taskList li {
-    background-color: white;
-    margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    margin: 10px 0;
+    background-color: #fff;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.complete {
+#taskList li.complete {
     text-decoration: line-through;
-    color: #999;
+    color: grey;
+    background-color: #f0f0f0;
 }
-/* Afegir aquesta part a styles.css */
+
+button.complete, button.delete {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+button.complete:hover, button.delete:hover {
+    background-color: #45a049;
+}
+
+button.delete {
+    background-color: #f44336;
+}
+
+button.delete:hover {
+    background-color: #e53935;
+}
+
+/* Estils per amagar elements */
 .hidden {
     display: none;
 }
 
-.login-container {
+#register, #login {
     text-align: center;
-    margin-top: 20px;
 }
 
-#content {
-    text-align: center;
+/* Estils per al botó de tancar sessió */
+button#logout {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+button#logout:hover {
+    background-color: #e53935;
 }
