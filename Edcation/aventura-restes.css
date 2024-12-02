@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.resultats {
+    margin-top: 20px;
+}
+
+.pregunta {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.resposta {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0066cc;
+}

@@ -1,0 +1,130 @@
+/* Estil per als quadres d'aventura */
+.aventura-quadrat {
+    width: 600px; /* Aproximadament 15 cm en píxels */
+    padding: 20px;
+    border: 2px solid #4CAF50; /* Bordó verd per al quadre */
+    border-radius: 10px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.aventura-quadrat h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.aventura-quadrat p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.aventura-quadrat button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.aventura-quadrat button:hover {
+    background-color: #45a049;
+}
+
+#inici-sessio {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#inici-sessio input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+#inici-sessio button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#inici-sessio button:hover {
+    background-color: #45a049;
+}
+
+#resultats {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+/*Botiga*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#productes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.producte {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.producte button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.producte button:hover {
+    background-color: #45a049;
+}
+
+#carret {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#finalitzar-compra {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#finalitzar-compra:hover {
+    background-color: #e53935;
+}

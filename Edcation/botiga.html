@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botiga Educativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Benvingut a la botiga educativa!</h1>
+
+    <div id="productes">
+        <!-- Aquí es mostraran els productes disponibles -->
+    </div>
+
+    <div id="carret">
+        <h2>Carret de compra</h2>
+        <ul id="llista-carret"></ul>
+        <p>Total: <span id="total-carret">0</span> punts</p>
+        <p id="punts-disponibles"></p>
+        <button id="finalitzar-compra" style="display: none;">Finalitzar compra</button>
+        <button id="buidar-carret">Buidar el carret</button>
+    </div>
+
+    <!-- Aventures (estan amagades fins que es comprin) -->
+    <div id="aventura-sumes" style="display: none;">
+        <h2>Aventura de Sumes</h2>
+        <p>Aquesta és l'aventura de sumes. Resol les sumes per guanyar punts!</p>
+        <button>Comença l'aventura de sumes</button>
+    </div>
+
+    <div id="aventura-restes" style="display: none;">
+        <h2>Aventura de Restes</h2>
+        <p>Aquesta és l'aventura de restes. Resol les restes per guanyar punts!</p>
+        <button>Comença l'aventura de restes</button>
+    </div>
+
+    <script src="botiga.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+    <!-- Secció d'aventures -->
+    <div id="aventures" style="display: none;">
+        <!-- Aventura de sumes -->
+        <div id="aventura-sumes" class="aventura">
+            <div class="aventura-quadrat">
+                <h2>Aventura de Sumes</h2>
+                <p>En aquesta aventura resoldràs sumes de nombres petits. Cada vegada que encertis una suma, guanyaràs punts! Comença resolent les primeres preguntes.</p>
+                <button id="comenca-aventura-sumes">Comença l'aventura de sumes</button>
+            </div>
+        </div>
+
+        <!-- Aventura de restes -->
+        <div id="aventura-restes" class="aventura" style="display: none;">
+            <div class="aventura-quadrat">
+                <h2>Aventura de Restes</h2>
+                <p>En aquesta aventura resoldràs restes de nombres petits. Cada vegada que encertis una resta, guanyaràs punts!</p>
+                <button id="comenca-aventura-restes">Comença l'aventura de restes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secció per fer les preguntes -->
+    <div id="preguntes" style="display: none;">
+        <h2 id="titol-pregunta">Pregunta de l'aventura</h2>
+        <p id="pregunta-text"></p>
+        <input type="text" id="resposta" placeholder="Introdueix la resposta">
+        <button id="comprovar-resposta">Comprovar resposta</button>
+        <p id="resultat"></p>
+    </div>
+    <script src="script.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aventures Educatives</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
