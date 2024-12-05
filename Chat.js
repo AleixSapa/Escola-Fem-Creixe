@@ -18,10 +18,24 @@ var sendButton = document.getElementById("send-button");
 var chatTitle = document.getElementById("chat-title");
 var usersList = document.getElementById("users-list");
 
+// Comprovar si ja hi ha un usuari guardat
+if (localStorage.getItem("username")) {
+    username = localStorage.getItem("username");  // Recuperar el nom de l'usuari des de localStorage
+    loginScreen.style.display = "none";
+    chatScreen.style.display = "flex";
+    addUser(username); // Afegir l'usuari a la llista d'usuaris connectats
+    updateUsersList();
+} else {
+    // Si no hi ha cap usuari guardat, mostrar la pantalla de registre
+    loginScreen.style.display = "block";
+    chatScreen.style.display = "none";
+}
+
 // Entrar al xat
 startChatButton.addEventListener("click", function () {
     username = usernameInput.value.trim();
     if (username) {
+        localStorage.setItem("username", username);  // Guardar el nom de l'usuari a localStorage
         loginScreen.style.display = "none";
         chatScreen.style.display = "flex";
         addUser(username); // Afegir l'usuari a la llista d'usuaris connectats
