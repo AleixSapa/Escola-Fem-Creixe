@@ -11,7 +11,6 @@ var loginScreen = document.getElementById("login-screen");
 var chatScreen = document.getElementById("chat-screen");
 var selectUser = document.getElementById("select-user");
 var selectUser2 = document.getElementById("select-user-2");
-var startChatButton = document.getElementById("start-chat");
 var createChatButton = document.getElementById("create-chat-button");
 var sendButton = document.getElementById("send-button");
 var messageInput = document.getElementById("message-input");
@@ -21,7 +20,7 @@ var chatTitle = document.getElementById("chat-title");
 
 // Funció per omplir la llista d'usuaris disponibles
 function populateUsersList() {
-    selectUser.innerHTML = "<option value=''>Selecciona un usuari</option>";
+    selectUser.innerHTML = "<option value=''>Selecciona el teu nom</option>";
     selectUser2.innerHTML = "<option value=''>Selecciona un usuari</option>";
     users.forEach(function(user) {
         var option = document.createElement("option");
@@ -34,10 +33,10 @@ function populateUsersList() {
 
 // Funció per mostrar la pantalla de xat
 function showChatScreen() {
-    loginScreen.style.display = "none";
-    chatScreen.style.display = "block";
-    chatTitle.textContent = "Conversa amb " + username;
-    updateChatsList();
+    loginScreen.style.display = "none";  // Ocultar la pantalla de login
+    chatScreen.style.display = "block";  // Mostrar la pantalla de xat
+    chatTitle.textContent = "Conversa amb " + username;  // Establir el títol de la conversa
+    updateChatsList();  // Actualitzar la llista de xats quan entres al xat
 }
 
 // Afegir un missatge al xat
@@ -52,7 +51,7 @@ function addMessageToChat(user, text) {
 
 // Cargar els missatges del xat seleccionat
 function loadMessages() {
-    messagesDiv.innerHTML = "";
+    messagesDiv.innerHTML = "";  // Buidem la secció de missatges abans de carregar els nous
     var chatData = chats[currentChat];
     if (chatData) {
         chatData.messages.forEach(function(message) {
@@ -64,7 +63,7 @@ function loadMessages() {
             messageElement.style.borderRadius = "5px";
             messagesDiv.appendChild(messageElement);
         });
-        messagesDiv.scrollTop = messagesDiv.scrollHeight; // Desplaçar cap avall
+        messagesDiv.scrollTop = messagesDiv.scrollHeight; // Desplaçar cap avall per veure els missatges més nous
     }
 }
 
@@ -86,36 +85,28 @@ createChatButton.addEventListener("click", function() {
     }
 });
 
-// Seleccionar un xat per veure'l
-chatsList.addEventListener("click", function(e) {
-    if (e.target.tagName === "LI") {
-        var chatName = e.target.textContent.replace(" i ", "-");
-        if (chats[chatName] && chats[chatName].participants.includes(username)) {
-            currentChat = chatName;
-            chatTitle.textContent = "Conversa amb " + chatName.replace("-", " i ");
-            loadMessages();
-        } else {
-            alert("No tens permís per entrar en aquest xat.");
-        }
-    }
-});
-
-// Enviar missatges
-sendButton.addEventListener("click", function() {
-    var messageText = messageInput.value.trim();
-    if (messageText && currentChat) {
-        addMessageToChat(username, messageText);
-        messageInput.value = ""; // Buidar el camp de text després de l'enviament
-    }
-});
-
-// Actualitzar la llista de xats
+// Afegir els xats creats a la llista
 function updateChatsList() {
-    chatsList.innerHTML = "";
+    chatsList.innerHTML = "";  // Buidem la llista abans de refrescar-la
     for (var chat in chats) {
         if (chats[chat].participants.includes(username)) {
             var chatElement = document.createElement("li");
             chatElement.textContent = chat.replace("-", " i ");
+
+            // Crear el botó per anar al xat
+            var goToChatButton = document.createElement("button");
+            goToChatButton.textContent = "Anar al xat"; // Nom del botó
+            goToChatButton.setAttribute("data-chat-name", chat); // Guardem el nom del xat al botó
+
+            // Quan es faci clic al botó, carreguem el xat corresponent
+            goToChatButton.addEventListener("click", function() {
+                var chatName = this.getAttribute("data-chat-name"); // Agafem el nom del xat
+                currentChat = chatName; // Estableix el xat actual com el seleccionat
+                chatTitle.textContent = "Conversa amb " + chatName.replace("-", " i ");
+                loadMessages(); // Carreguem els missatges del xat seleccionat
+            });
+
+            chatElement.appendChild(goToChatButton);
             chatsList.appendChild(chatElement);
         }
     }
@@ -123,30 +114,36 @@ function updateChatsList() {
 
 // Guardar els xats a localStorage
 function saveChats() {
-    localStorage.setItem('chats', JSON.stringify(chats));
+    localStorage.setItem("chats", JSON.stringify(chats));
 }
 
 // Carregar els xats des de localStorage
 function loadChats() {
-    var savedChats = localStorage.getItem('chats');
+    var savedChats = localStorage.getItem("chats");
     if (savedChats) {
         chats = JSON.parse(savedChats);
     }
 }
 
-// Configurar la selecció d'usuari i iniciar el xat
-startChatButton.addEventListener("click", function() {
-    var selectedUser = selectUser.value;
-    if (selectedUser) {
-        username = selectedUser;
-        showChatScreen(); // Mostrem el xat un cop seleccionat l'usuari
+// Quan es fa clic al botó "Iniciar sessió"
+document.getElementById("login-button").addEventListener("click", function() {
+    username = selectUser.value;
+    if (username) {
+        loadChats();
+        showChatScreen();
     } else {
-        alert("Si us plau, selecciona un usuari.");
+        alert("Selecciona un nom d'usuari.");
     }
 });
 
-// Inicialització: omplir usuaris, carregar els xats i configurar la pàgina
-window.onload = function() {
-    populateUsersList(); // Omplir la llista d'usuaris quan es carrega la pàgina
-    loadChats(); // Carregar els xats des de localStorage
-};
+// Quan es fa clic al botó d'enviar missatge
+sendButton.addEventListener("click", function() {
+    var message = messageInput.value.trim();
+    if (message) {
+        addMessageToChat(username, message); // Afegeix el missatge al xat
+        messageInput.value = ""; // Buidar el camp de missatge després d'enviar
+    }
+});
+
+// Carregar la llista d'usuaris en començar
+populateUsersList();

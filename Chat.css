@@ -1,46 +1,50 @@
-body {
+/* Estil per a la pantalla de login */
+#login-screen {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Estil per a la pantalla de xat */
+#chat-screen {
+    padding: 20px;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
 }
 
-#login-screen, #chat-screen {
-    margin: 20px;
-}
-
-textarea {
+/* Estil per als missatges */
+#messages {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
+    margin-bottom: 10px;
 }
 
+/* Estil per als missatges enviats per l'usuari */
+#messages div {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Estil per a l'entrada de missatge */
+#message-input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+/* Estil per als botons */
 button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding: 10px;
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-#messages {
-    background-color: #fff;
+/* Estil per als desplegables */
+select {
     padding: 10px;
-    border-radius: 5px;
     margin-bottom: 10px;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-li {
-    margin: 5px 0;
-    padding: 5px;
-    background-color: #e1e1e1;
-    border-radius: 5px;
 }

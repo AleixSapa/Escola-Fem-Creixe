@@ -4,36 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xat Privat</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Chat.css">
 </head>
 <body>
-
-    <!-- Pantalla d'inici de sessió -->
     <div id="login-screen">
-        <h1>Inicia sessió</h1>
+        <h2>Inicia sessió</h2>
         <select id="select-user">
-            <option value="">Selecciona un usuari</option>
+            <!-- Usuaris dinàmics seran carregats aquí -->
         </select>
-        <button id="start-chat">Entrar</button>
+        <button id="login-button">Iniciar sessió</button>
     </div>
 
-    <!-- Pantalla de xat -->
-    <div id="chat-screen" style="display: none;">
-        <h2 id="chat-title">Selecciona un xat</h2>
-        <div>
-            <select id="select-user-2">
-                <option value="">Selecciona un usuari</option>
-            </select>
-            <button id="create-chat-button">Crear xat privat</button>
-        </div>
-        <div>
-            <ul id="chats-list"></ul>
-        </div>
-        <div id="messages" style="margin-top: 20px;"></div>
-        <input type="text" id="message-input" placeholder="Escriu un missatge...">
+    <div id="chat-screen" style="display:none;">
+        <h2 id="chat-title">Conversa</h2>
+        <div id="messages"></div>
+        <input id="message-input" type="text" placeholder="Escriu el teu missatge">
         <button id="send-button">Enviar</button>
+        <select id="select-user-2">
+            <!-- Usuaris per al xat -->
+        </select>
+        <button id="create-chat-button">Crear xat</button>
+        <ul id="chats-list"></ul>
     </div>
 
-    <script src="chat.js"></script>
+    <script src="Chat.js"></script>
 </body>
 </html>
