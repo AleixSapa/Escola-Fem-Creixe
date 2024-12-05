@@ -2,7 +2,7 @@
 var username = "";
 var currentChat = null;
 var chats = {}; // Objecte per emmagatzemar els xats (clau: nom d'usuari, valor: array de missatges)
-var users = []; // Llista d'usuaris actualment connectats
+var users = ["Aleix","Mat","Vanessa","Sara","Pilar","Clara","Sofia","Luke","Leo","Emma"]; // Llista d'usuaris predefinits
 
 // Selecció d'elements
 var loginScreen = document.getElementById("login-screen");
@@ -18,24 +18,26 @@ var sendButton = document.getElementById("send-button");
 var chatTitle = document.getElementById("chat-title");
 var usersList = document.getElementById("users-list");
 
-// Comprovar si ja hi ha un usuari guardat
-if (localStorage.getItem("username")) {
-    username = localStorage.getItem("username");  // Recuperar el nom de l'usuari des de localStorage
-    loginScreen.style.display = "none";
-    chatScreen.style.display = "flex";
-    addUser(username); // Afegir l'usuari a la llista d'usuaris connectats
-    updateUsersList();
-} else {
-    // Si no hi ha cap usuari guardat, mostrar la pantalla de registre
-    loginScreen.style.display = "block";
-    chatScreen.style.display = "none";
+// Mostrar la pantalla d'inici de sessió amb els usuaris predefinits
+loginScreen.style.display = "block";
+chatScreen.style.display = "none";
+populateUsersList();  // Omplir la llista d'usuaris per seleccionar
+
+// Omplir la llista de usuaris per seleccionar a l'inici
+function populateUsersList() {
+    selectUser.innerHTML = "<option value=''>Selecciona un usuari</option>";
+    users.forEach(function (user) {
+        var optionElement = document.createElement("option");
+        optionElement.value = user;
+        optionElement.textContent = user;
+        selectUser.appendChild(optionElement);
+    });
 }
 
 // Entrar al xat
 startChatButton.addEventListener("click", function () {
-    username = usernameInput.value.trim();
+    username = selectUser.value.trim();
     if (username) {
-        localStorage.setItem("username", username);  // Guardar el nom de l'usuari a localStorage
         loginScreen.style.display = "none";
         chatScreen.style.display = "flex";
         addUser(username); // Afegir l'usuari a la llista d'usuaris connectats
