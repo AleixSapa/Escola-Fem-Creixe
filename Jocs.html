@@ -1,4 +1,34 @@
-<button><a href="pedre.html">Pedra, Paper o Tisores</a></button>
-<button><a href="Snake.html">Snake</a></button>
-<button><a href="Memory.html">Memory</a></button>
-<button><a href="Salta Obtacles.html">Salta Obstacles</a></button>
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sessió</title>
+  <link rel="stylesheet" href="Inicia sesio.css">
+</head>
+<body>
+  <div class="login-container" id="login-section">
+    <h1>Iniciar Sessió</h1>
+    <form id="login-form">
+      <label for="username">Nom d'usuari</label>
+      <input type="text" id="username" placeholder="Escriu el teu nom d'usuari" required>
+
+      <label for="password">Contrasenya</label>
+      <input type="password" id="password" placeholder="Escriu la teva contrasenya" required>
+
+      <button type="submit">Inicia sessió</button>
+    </form>
+    <p id="error-msg"></p>
+  </div>
+
+  <div class="game-container" id="game-section" style="display: none;">
+    <h2>Selecciona un joc</h2>
+    <button><a href="pedre.html">Pedra, Paper o Tisores</a></button>
+    <button><a href="Snake.html">Snake</a></button>
+    <button><a href="Memory.html">Memory</a></button>
+    <button><a href="Salta Obtacles.html">Salta Obstacles</a></button>
+    <p id="tries-left"></p>
+  </div>
+  <script src="Inicia sesio.js"></script>
+</body>
+</html>

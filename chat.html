@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xat Privat</title>
+    <link rel="stylesheet" href="Chat.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Pantalla de registre -->
+        <div id="login-screen">
+            <h2>Benvingut al Xat Privat</h2>
+            <input type="text" id="username" placeholder="Introdueix el teu nom" />
+            <button id="start-chat">Entrar</button>
+        </div>
+
+        <!-- Pantalla de xat -->
+        <div id="chat-screen" style="display: none;">
+            <div id="sidebar">
+                <h3>Usuaris disponibles</h3>
+                <ul id="users-list"></ul>
+
+                <h3>Crea un xat privat</h3>
+                <select id="select-user">
+                    <option value="">Selecciona un usuari</option>
+                </select>
+                <button id="create-chat-button">Crear xat</button>
+                
+                <h3>Xats actius</h3>
+                <ul id="chats-list"></ul>
+            </div>
+            <div id="chat-container">
+                <h2 id="chat-title">Selecciona un xat</h2>
+                <div id="messages"></div>
+                <input type="text" id="message-input" placeholder="Escriu un missatge..." />
+                <button id="send-button">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <script src="Chat.js"></script>
+</body>
+</html>
