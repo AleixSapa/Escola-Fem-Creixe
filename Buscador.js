@@ -1,15 +1,23 @@
-function redireccio() {
-    var nom = prompt("Quin és el teu nom?");
+function QuiEts() {
+    var pepol=prompt("Quin és el teu nom?");
+    redireccio(pepol)
+}
+function redireccio(NomDeLaPersona) {
     
-    if (nom === "Aleix") {
+    if (NomDeLaPersona === "Aleix") {
         alert("Hola Aleix! Tens accés a continguts especials!"+" "+"¡Anem a programar!");
         // Aquí pots afegir coses especials per a Aleix
         EsElAleix()
-    } else {
-        alert("Hola " + nom)
+    }
+    if(NomDeLaPersona==""){
+        alert("As de fuicar el teu nom");
+        QuiEts()
+    }else {
+        alert("Hola " + NomDeLaPersona)
         // Aquí pots afegir coses per als altres noms
         NoEsElAleix()
     }
+
 };
 
 function EsElAleix(){
