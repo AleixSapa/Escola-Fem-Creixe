@@ -8,21 +8,12 @@ function redireccio(NomDeLaPersona) {
         alert("Hola Aleix! Tens accés a continguts especials!"+" "+"¡Anem a programar!");
         // Aquí pots afegir coses especials per a Aleix
         EsElAleix()
-    }
-    if(NomDeLaPersona==""){
-        alert("As de fuicar el teu nom");
-        QuiEts()
-    }else {
-        alert("Hola " + NomDeLaPersona)
-        // Aquí pots afegir coses per als altres noms
-        NoEsElAleix()
-    }
+    }else{NoEsElAleix()}
 
 };
-
 function EsElAleix(){
     var eleccio = prompt(
-        "Tria una opció:\n1. Estudints i mestres\n2. Calendari\n3. Alubnos I Profesores\n4. Carta\n5.Deures\n6. Aprender\n7. Chat\n8. Ensenyar a programar\n9. Fotos\n10. Horari Setmanal\n11. Jocs"
+        "Tria una opció:\n1. Estudints i mestres\n2. Calendari\n3. Alubnos I Profesores\n4. Carta\n5.Deures\n6. Aprender\n7. Chat\n8. Ensenyar a programar\n9. Fotos\n10. Horari Setmanal\n11. Jocs\n12. Ensenyar a programar GTP"
     )
     if (eleccio === "1") {
         window.location.href = "Alubnos I Profesores.html"
@@ -46,6 +37,8 @@ function EsElAleix(){
         window.location.href = "Horario Semanal.html"
     } else if (eleccio === "11") {
         window.location.href = "Jocs.html"
+    }else if(eleccio === "12"){
+        window.location.href="Ensenya a programar/index.html"
     }
     
 }
