@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cursos de Programació</title>
+  <title>Iniciar Sessió</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h1>Cursos de Programació</h1>
-  <div id="cursos">
-    <button id="logo" class="curs desbloquejat">Logo</button>
-    <button id="karel" class="curs bloquejat" disabled>Karel</button>
-    <button id="python" class="curs bloquejat" disabled>Python</button>
-    <button id="web" class="curs bloquejat" disabled>Web (HTML, CSS, JS)</button>
+  <h1>Inicia Sessió</h1>
+
+  <!-- Formulari d'inici de sessió -->
+  <div id="login-container">
+    <h2>Inicia Sessió</h2>
+    <input type="text" id="username" placeholder="Nom d'usuari">
+    <button id="login-btn">Inicia Sessió</button>
+    <p id="error-msg" style="color: red; display: none;">Usuari no autoritzat!</p>
   </div>
+
+  <!-- Missatge de benvinguda (amagat fins que s'inicia sessió) -->
+  <div id="welcome-container" style="display: none;">
+    <h2 id="welcome-msg"></h2>
+    <button id="logout-btn">Tanca Sessió</button>
+  </div>
+  <!--
+  <div id="cursos" style="display: none;">
+    <h2 id="welcome-msg"></h2>
+    <button id="logout-btn">Tanca Sessió</button>
+    <div>
+      <button id="logo" class="curs desbloquejat">Logo</button>
+      <button id="karel" class="curs bloquejat" disabled>Karel</button>
+      <button id="python" class="curs bloquejat" disabled>Python</button>
+      <button id="web" class="curs bloquejat" disabled>Web (HTML, CSS, JS)</button>
+    </div>
+  </div>
+-->
   <script src="script.js"></script>
 </body>
+
 </html>

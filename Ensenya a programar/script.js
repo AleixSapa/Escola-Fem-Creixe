@@ -1,57 +1,56 @@
-function Avans_QuelocalStorage(params) {
-    params
-}
-function localStorage(Avans_Que,Pun_Que) {
-    Avans_Que,localStorage,Pun_Que
-}
-function Despres(params) {
-    
-}
-// Identifiquem els botons
-var logo = document.getElementById("logo");
-var karel = document.getElementById("karel");
-var python = document.getElementById("python");
-var web = document.getElementById("web");
-// Funció per carregar l'estat del progrés
-function carregarProgres() {
-  var estatKarel = localStorage.getItem("karel");
-  var estatPython = localStorage.getItem("python");
-  var estatWeb = localStorage.getItem("web");
-  if (estatKarel === "desbloquejat") {
-    karel.classList.remove("bloquejat");
-    karel.classList.add("desbloquejat");
-    karel.disabled = false;
-  }
-  if (estatPython === "desbloquejat") {
-    python.classList.remove("bloquejat");
-    python.classList.add("desbloquejat");
-    python.disabled = false;
-  }
-  if (estatWeb === "desbloquejat") {
-    web.classList.remove("bloquejat");
-    web.classList.add("desbloquejat");
-    web.disabled = false;
-  }
-}
+// Llista d'usuaris autoritzats (pots afegir més usuaris aquí)
+var usuarisValids = ["aleix", "mat", "admin", "p"];
 
-// Funcions per desbloquejar cursos
-logo.addEventListener("click", function () {
-  alert("Has completat Logo! Karel es desbloqueja.");
-  localStorage.setItem("karel", "desbloquejat");
-  carregarProgres();
+// Seleccionem els elements HTML
+var loginContainer = document.getElementById("login-container");
+var welcomeContainer = document.getElementById("welcome-container");
+var loginBtn = document.getElementById("login-btn");
+var logoutBtn = document.getElementById("logout-btn");
+var usernameInput = document.getElementById("username");
+var errorMsg = document.getElementById("error-msg");
+var welcomeMsg = document.getElementById("welcome-msg");
+
+// Funció per iniciar sessió
+loginBtn.addEventListener("click", function () {
+  var username = usernameInput.value.trim().toLowerCase(); // Convertim a minúscules
+  if (usuarisValids.includes(username)) {
+    localStorage.setItem("currentUser", username);
+    mostrarBenvinguda(username);
+    errorMsg.style.display = "none"; // Amaga el missatge d'error
+  } else {
+    errorMsg.style.display = "block"; // Mostra el missatge d'error
+  }
 });
 
-karel.addEventListener("click", function () {
-  alert("Has completat Karel! Python es desbloqueja.");
-  localStorage.setItem("python", "desbloquejat");
-  carregarProgres();
+// Funció per tancar sessió
+logoutBtn.addEventListener("click", function () {
+  localStorage.removeItem("currentUser");
+  location.reload(); // Recàrrega la pàgina per reiniciar tot
 });
 
-python.addEventListener("click", function () {
-  alert("Has completat Python! Web es desbloqueja.");
-  localStorage.setItem("web", "desbloquejat");
-  carregarProgres();
-});
+// Funció per mostrar el missatge de benvinguda
+function mostrarBenvinguda(username) {
+  loginContainer.style.display = "none"; // Amaga la pantalla d'inici de sessió
+  welcomeContainer.style.display = "block"; // Mostra la benvinguda
+  welcomeMsg.textContent = `Benvingut, ${username}!`;
+}
 
-// Carregar el progrés en iniciar
-carregarProgres();
+// Comprovar si hi ha un usuari actiu al carregar la pàgina
+if (localStorage.getItem("currentUser")) {
+  mostrarBenvinguda(localStorage.getItem("currentUser"));
+}
+
+
+
+
+
+
+
+
+localStorage.getItem = function Coença() {
+  prompt("Per a fer diferents cuadrats com es fa?")
+    (<Option>Amb un bucle</Option>)
+    (<Option>Programent un a un</Option>)
+    (<Option>Amb una funcio</Option>)
+}
+
