@@ -1,35 +1,63 @@
-body {
-  font-family: Arial, sans-serif;
+/* Estil per al formulari d'inici de sessió */
+#login-container {
+  max-width: 300px;
+  margin: auto;
   text-align: center;
-  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-  margin-top: 20px;
-  color: #333;
+#username {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-#cursos {
-  margin-top: 30px;
-}
-
-.curs {
-  display: block;
-  margin: 10px auto;
+#login-btn {
   padding: 10px 20px;
-  font-size: 16px;
+  background-color: #28a745;
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.desbloquejat {
-  background-color: #4caf50;
-  color: white;
+#login-btn:hover {
+  background-color: #218838;
 }
 
-.bloquejat {
-  background-color: #ccc;
-  color: #666;
-  cursor: not-allowed;
+/* Estil per al missatge de benvinguda */
+#welcome-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+#logout-btn {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Estil per als exercicis */
+#eggercicis-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+h4 {
+  color: #007bff;
 }

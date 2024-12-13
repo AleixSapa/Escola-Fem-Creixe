@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="ca">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar Sessió</title>
+  <title>Inicia Sessió</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
   <h1>Inicia Sessió</h1>
 
@@ -23,20 +21,42 @@
   <div id="welcome-container" style="display: none;">
     <h2 id="welcome-msg"></h2>
     <button id="logout-btn">Tanca Sessió</button>
-  </div>
-  <!--
-  <div id="cursos" style="display: none;">
-    <h2 id="welcome-msg"></h2>
-    <button id="logout-btn">Tanca Sessió</button>
-    <div>
-      <button id="logo" class="curs desbloquejat">Logo</button>
-      <button id="karel" class="curs bloquejat" disabled>Karel</button>
-      <button id="python" class="curs bloquejat" disabled>Python</button>
-      <button id="web" class="curs bloquejat" disabled>Web (HTML, CSS, JS)</button>
+
+    <!-- Contingut dels exercicis -->
+    <div id="eggercicis-container">
+      <h3>Exercicis per llenguatge:</h3>
+
+      <!-- Exercicis de Logo -->
+      <div id="logo-exercises">
+        <h4>Logo:</h4>
+        <ul>
+          <li>Exercici 1: Escriu un codi per dibuixar un quadrat a Logo.</li>
+          <li>Exercici 2: Escriu un codi per girar 90 graus a la dreta a Logo.</li>
+          <li>Exercici 3: Escriu un bucle per repetir una acció 4 vegades.</li>
+        </ul>
+      </div>
+
+      <!-- Exercicis de Karel -->
+      <div id="karel-exercises">
+        <h4>Karel:</h4>
+        <ul>
+          <li>Exercici 4: Escriu una ordre per moure el robot cap endavant.</li>
+          <li>Exercici 5: Escriu un codi per recollir tots els objectes d'una fila.</li>
+        </ul>
+      </div>
+
+      <!-- Exercicis de Web (HTML, CSS, JS) -->
+      <div id="web-exercises">
+        <h4>Web (HTML, CSS, JS):</h4>
+        <ul>
+          <li>Exercici 6: Escriu un codi HTML per crear un botó.</li>
+          <li>Exercici 7: Escriu un codi CSS per donar estil al botó.</li>
+          <li>Exercici 8: Escriu un codi JavaScript per fer que el botó mostri un missatge quan es clica.</li>
+        </ul>
+      </div>
     </div>
   </div>
--->
+
   <script src="script.js"></script>
 </body>
-
 </html>
